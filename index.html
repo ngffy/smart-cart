@@ -9,11 +9,11 @@
 		<main>
 			<div class="wrapper">
 			<div id="store-search">
-				<input type="search">
+				<input type="search" placeholder="Search for items" size=50>
 				<button>Search</button>
 			</div>
-			<div id="items">
-				<p>Items</p>
+			<div class="list-div" id="items">
+				<h3>Items</h3>
 				<ul id="item-list">
 					<li>Salt</li>
 					<li>Pepper</li>
@@ -27,16 +27,16 @@
 					<li>Cheese</li>
 				</ul>
 			</div>
-			<div id="coupons">
-				<p>Coupons</p>
+			<div class="list-div" id="coupons">
+				<h3>Coupons</h3>
 				<ul id="coupon-list">
 					<li>$1.00 off mushrooms</li>
 					<li>$0.50 off cheese</li>
 				</ul>
 			</div>
 			<img id="store-map" src="store-map.jpg">
-			<div id="cart">
-				<p>Cart</p>
+			<div class="list-div" id="cart">
+				<h3>Cart</h3>
 				<ul id="cart-list">
 					<li>Milk</li>
 					<li>Eggs</li>
@@ -52,7 +52,11 @@
 					<li>Garlic</li>
 					<li>Ice cream</li>
 				</ul>
-				<button>Pay</button>
+				<div id="pay-button">
+					Total: $112.86
+					<br>
+					<button>Pay</button>
+				</div>
 			</div>
 			</div>
 		</main>
