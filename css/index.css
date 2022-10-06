@@ -1,0 +1,34 @@
+ul {
+	border: solid;
+}
+
+.wrapper {
+	display: grid;
+	width: 1280px;
+	height: 720px;
+}
+
+#store-search {
+	grid-column: 3 / 6;
+	grid-row: 1;
+}
+
+#items {
+	grid-column: 1;
+	grid-row: 2 / 5;
+}
+
+#coupons {
+	grid-column: 2;
+	grid-row: 2 / 5;
+}
+
+#store-map {
+	grid-column: 3 / 6;
+	grid-row: 2 / 5;
+}
+
+#cart {
+	grid-column: 6;
+	grid-row: 2 / 5;
+}
