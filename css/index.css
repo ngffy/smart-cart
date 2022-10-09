@@ -1,3 +1,11 @@
+/*
+ * Palette colors:
+ * B5B1B2
+ * ADA9B7
+ * A9AFD1
+ * A1CDF4
+ * 7C809B
+ */
 body {
 	font-family: sans-serif;
 }
@@ -9,11 +17,13 @@ ul {
 	height: 500px;
 	max-height: 500px;
 	overflow: auto;
+	background-color: #B5B1B2
 }
 
 li {
 	border: outset;
 	padding: 3px;
+	background-color: #A1CDF4
 }
 
 .wrapper {
@@ -24,6 +34,7 @@ li {
 	row-gap: 2px;
 	column-gap: 10px;
 	padding: 10px;
+	background-color: #A9AFD1
 }
 
 .list-div {
