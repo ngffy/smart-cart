@@ -1,0 +1,14 @@
+[
+	{
+		"itemName": "milk",
+		"unitPrice": 3.20,
+		"unit": null,
+		"aisle": "dairy"
+	},
+	{
+		"itemName": "eggs",
+		"unitPrice": 1.50,
+		"unit": null,
+		"aisle": "1"
+	}
+]

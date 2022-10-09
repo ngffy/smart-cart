@@ -1,0 +1,50 @@
+[
+	{
+		"itemName": "milk",
+		"unitQuantity": 1
+	},
+	{
+		"itemName": "eggs",
+		"unitQuantity": 1
+	},
+	{
+		"itemName": "bananas",
+		"unitQuantity": 4
+	},
+	{
+		"itemName": "salt",
+		"unitQuantity": 1
+	},
+	{
+		"itemName": "pepper",
+		"unitQuantity": 1
+	},
+	{
+		"itemName": "beef",
+		"unitQuantity": 16
+	},
+	{
+		"itemName": "mushrooms",
+		"unitQuantity": 1
+	},
+	{
+		"itemName": "trout",
+		"unitQuantity": 1
+	},
+	{
+		"itemName": "cod",
+		"unitQuantity": 1
+	},
+	{
+		"itemName": "pollock",
+		"unitQuantity": 1
+	},
+	{
+		"itemName": "cottage cheese",
+		"unitQuantity": 1
+	},
+	{
+		"itemName": "cheese",
+		"unitQuantity": 1
+	}
+]
