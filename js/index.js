@@ -4,7 +4,7 @@ class ShoppingList {
 			.then(response => response.json())
 			.then(jsonObject => {
 				this.items = jsonObject
-				this.populateListElement()
+				// this.populateListElement()
 			})
 	}
 
@@ -34,14 +34,28 @@ class StoreItems {
 	}
 }
 
+class StoreCoupons {
+	constructor() {
+		fetch("./js/coupons.json")
+			.then(response => response.json())
+			.then(jsonObject => {
+				this.coupons = jsonObject
+			})
+	}
+}
+
 class ShoppingCart {
 	constructor() {
 		this.storeItems = new StoreItems()
+		this.storeCoupons = new StoreCoupons()
 		this.userList = new ShoppingList()
 
 		this.items = {}
+		this.coupons = {}
 		this.total = 0
 		this.aisle = null
+
+		this.updateUI()
 	}
 
 	addToCart(itemName, quantity) {
@@ -75,7 +89,20 @@ class ShoppingCart {
 			let unitPrice = this.items[item]["unitPrice"]
 			let quantity = this.items[item]["quantity"]
 			this.total += unitPrice * quantity
+
+			if (item in this.coupons) {
+				this.total -= this.coupons[item]['discount'] * quantity
+			}
 		}
+	}
+
+	applyCoupon(itemName) {
+		if (itemName in this.items) {
+			this.coupons[itemName] = this.storeCoupons.coupons[itemName]
+		}
+
+		this.updateTotal()
+		this.updateUI()
 	}
 
 	addToCartClick() {
@@ -94,6 +121,7 @@ class ShoppingCart {
 
 	payClick() {
 		this.items = {}
+		this.coupons = {}
 		this.total = 0
 
 		this.updateUI()
@@ -116,6 +144,14 @@ class ShoppingCart {
 			let cartQuantity = this.items[item]["quantity"]
 			li.textContent = item + " (" + cartQuantity + " @ $" + price.toFixed(2) +  ")"
 			cartList.appendChild(li)
+
+			if (item in this.coupons) {
+				let li = document.createElement('li')
+				let discount = this.coupons[item]["discount"]
+				li.textContent = "$" + discount.toFixed(2) + " off x" + cartQuantity
+				li.classList.add('clipped-coupon')
+				cartList.appendChild(li)
+			}
 		}
 
 		let cartTotal = document.getElementById("cart-total")
@@ -148,6 +184,31 @@ class ShoppingCart {
 			}
 		}
 
+		let couponList = document.getElementById("coupon-list")
+
+		// clear list
+		couponList.innerHTML = ""
+
+		for (const item in this.storeCoupons.coupons) {
+			let li = document.createElement('li')
+			let discount = this.storeCoupons.coupons[item]['discount']
+
+			li.textContent = "$" + discount.toFixed(2) + " off " + item
+			li.onclick = this.applyCoupon.bind(this, item)
+			li.classList.add('coupon')
+
+			if (item in this.coupons) {
+				li.classList.add('clicked-coupon')
+			} else {
+				li.classList.add('coupon')
+			}
+
+			let itemLocation = this.storeItems.items[item]["location"]
+			if (this.aisle === null || this.aisle === itemLocation) {
+				couponList.appendChild(li)
+			}
+		}
+
 		let itemHeader = document.getElementById("item-header")
 		if (this.aisle === null) {
 			itemHeader.innerHTML = "All Items"
@@ -160,3 +221,4 @@ class ShoppingCart {
 }
 
 let userCart = new ShoppingCart()
+userCart.updateUI()

@@ -46,6 +46,20 @@ li {
 	background-color: #ADA9B7
 }
 
+.coupon {
+	border: 4px outset;
+	background-color: #A5FFD6
+}
+
+.clicked-coupon {
+	border: 4px inset;
+	background-color: #ADA9B7
+}
+
+.clipped-coupon {
+	background-color: #A5FFD6
+}
+
 #store-search {
 	grid-column: 3;
 	grid-row: 1;
