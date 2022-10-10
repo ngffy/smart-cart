@@ -43,7 +43,7 @@
 					<li>Ice cream</li>
 				</ul>
 				<div id="pay-button">
-					Total: $112.86
+					Total: <span id="cart-total">$112.86</span>
 					<br>
 					<button>Pay</button>
 				</div>
@@ -54,8 +54,8 @@
 					<input id="item-name" type="text" placeholder="Enter item">
 					<input id="item-quantity" type="text" placeholder="Enter quantity" size=10>
 					<br>
-					<button onclick="addToCartClick(userCart)">Add to cart</button>
-					<button>Remove from cart</button>
+					<button onclick="userCart.addToCartClick()">Add to cart</button>
+					<button onclick="userCart.removeFromCartClick()">Remove from cart</button>
 				</div>
 			</div>
 		</main>
