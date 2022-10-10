@@ -2,13 +2,51 @@
 	{
 		"itemName": "milk",
 		"unitPrice": 3.20,
-		"unit": null,
-		"aisle": "dairy"
+		"location": "dairy"
 	},
 	{
 		"itemName": "eggs",
 		"unitPrice": 1.50,
-		"unit": null,
-		"aisle": "1"
+		"location": "1"
+	},
+	{
+		"itemName": "bananas",
+		"unitPrice": 0.69,
+		"location": "produce"
+	},
+	{
+		"itemName": "salt",
+		"unitPrice": 1.00,
+		"location": "3"
+	},
+	{
+		"itemName": "pepper",
+		"unitPrice": 1.00,
+		"location": "3"
+	},
+	{
+		"itemName": "beef",
+		"unitPrice": 0.43,
+		"location": "meat"
+	},
+	{
+		"itemName": "mushrooms",
+		"unitPrice": 2.80,
+		"location": "4"
+	},
+	{
+		"itemName": "salmon",
+		"unitPrice": 5.00,
+		"location": "meat"
+	},
+	{
+		"itemName": "cottage cheese",
+		"unitPrice": 2.39,
+		"location": "dairy"
+	},
+	{
+		"itemName": "cheese",
+		"unitPrice": 1.50,
+		"location": "cheese"
 	}
 ]
