@@ -21,7 +21,8 @@ ul {
 }
 
 li {
-	border: outset;
+	border-width: 2px;
+	border-bottom-style: solid;
 	padding: 3px;
 	background-color: #A1CDF4
 }
