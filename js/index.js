@@ -98,7 +98,7 @@ class ShoppingCart {
 		this.updateUI()
 	}
 
-	updateUI() {
+	updateUI(aisle=null) {
 		let cartList = document.getElementById("cart-list")
 
 		// clear list
@@ -136,7 +136,19 @@ class ShoppingCart {
 				li.classList.add('gotten')
 			}
 
-			itemList.appendChild(li)
+			let itemLocation = this.storeItems.items[item]["location"]
+			if (aisle === null || aisle === itemLocation) {
+				itemList.appendChild(li)
+			}
+		}
+
+		let itemHeader = document.getElementById("item-header")
+		if (aisle === null) {
+			itemHeader.innerHTML = "Items"
+		} else if (isFinite(aisle)) {
+			itemHeader.innerHTML = "Aisle " + aisle + " Items"
+		} else {
+			itemHeader.innerHTML = aisle[0].toUpperCase() + aisle.substr(1) + " Items"
 		}
 	}
 }
