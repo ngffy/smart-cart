@@ -132,31 +132,7 @@ class ShoppingCart {
 		this.updateUI()
 	}
 
-	updateUI() {
-		let cartList = document.getElementById("cart-list")
-
-		// clear list
-		cartList.innerHTML = ""
-
-		for (const item in this.items) {
-			let li = document.createElement('li')
-			let price = this.items[item]["unitPrice"]
-			let cartQuantity = this.items[item]["quantity"]
-			li.textContent = item + " (" + cartQuantity + " @ $" + price.toFixed(2) +  ")"
-			cartList.appendChild(li)
-
-			if (item in this.coupons) {
-				let li = document.createElement('li')
-				let discount = this.coupons[item]["discount"]
-				li.textContent = "$" + discount.toFixed(2) + " off x" + cartQuantity
-				li.classList.add('clipped-coupon')
-				cartList.appendChild(li)
-			}
-		}
-
-		let cartTotal = document.getElementById("cart-total")
-		cartTotal.innerHTML = "$" + this.total.toFixed(2)
-
+	updateUserList() {
 		let itemList = document.getElementById("item-list")
 
 		// clear list
@@ -184,6 +160,40 @@ class ShoppingCart {
 			}
 		}
 
+		let itemHeader = document.getElementById("item-header")
+		if (this.aisle === null) {
+			itemHeader.innerHTML = "All Items"
+		} else if (isFinite(this.aisle)) {
+			itemHeader.innerHTML = "Aisle " + this.aisle + " Items"
+		} else {
+			itemHeader.innerHTML = this.aisle[0].toUpperCase() + this.aisle.substr(1) + " Items"
+		}
+	}
+
+	updateCartList() {
+		let cartList = document.getElementById("cart-list")
+
+		// clear list
+		cartList.innerHTML = ""
+
+		for (const item in this.items) {
+			let li = document.createElement('li')
+			let price = this.items[item]["unitPrice"]
+			let cartQuantity = this.items[item]["quantity"]
+			li.textContent = item + " (" + cartQuantity + " @ $" + price.toFixed(2) +  ")"
+			cartList.appendChild(li)
+
+			if (item in this.coupons) {
+				let li = document.createElement('li')
+				let discount = this.coupons[item]["discount"]
+				li.textContent = "$" + discount.toFixed(2) + " off x" + cartQuantity
+				li.classList.add('clipped-coupon')
+				cartList.appendChild(li)
+			}
+		}
+	}
+
+	updateCouponList() {
 		let couponList = document.getElementById("coupon-list")
 
 		// clear list
@@ -208,15 +218,15 @@ class ShoppingCart {
 				couponList.appendChild(li)
 			}
 		}
+	}
 
-		let itemHeader = document.getElementById("item-header")
-		if (this.aisle === null) {
-			itemHeader.innerHTML = "All Items"
-		} else if (isFinite(this.aisle)) {
-			itemHeader.innerHTML = "Aisle " + this.aisle + " Items"
-		} else {
-			itemHeader.innerHTML = this.aisle[0].toUpperCase() + this.aisle.substr(1) + " Items"
-		}
+	updateUI() {
+		this.updateCartList()
+		this.updateCouponList()
+		this.updateUserList()
+
+		let cartTotal = document.getElementById("cart-total")
+		cartTotal.innerHTML = "$" + this.total.toFixed(2)
 	}
 }
 
