@@ -41,6 +41,7 @@ class ShoppingCart {
 
 		this.items = {}
 		this.total = 0
+		this.aisle = null
 	}
 
 	addToCart(itemName, quantity) {
@@ -98,7 +99,12 @@ class ShoppingCart {
 		this.updateUI()
 	}
 
-	updateUI(aisle=null) {
+	aisleClick(aisle) {
+		this.aisle = aisle
+		this.updateUI()
+	}
+
+	updateUI() {
 		let cartList = document.getElementById("cart-list")
 
 		// clear list
@@ -137,18 +143,18 @@ class ShoppingCart {
 			}
 
 			let itemLocation = this.storeItems.items[item]["location"]
-			if (aisle === null || aisle === itemLocation) {
+			if (this.aisle === null || this.aisle === itemLocation) {
 				itemList.appendChild(li)
 			}
 		}
 
 		let itemHeader = document.getElementById("item-header")
-		if (aisle === null) {
+		if (this.aisle === null) {
 			itemHeader.innerHTML = "Items"
-		} else if (isFinite(aisle)) {
-			itemHeader.innerHTML = "Aisle " + aisle + " Items"
+		} else if (isFinite(this.aisle)) {
+			itemHeader.innerHTML = "Aisle " + this.aisle + " Items"
 		} else {
-			itemHeader.innerHTML = aisle[0].toUpperCase() + aisle.substr(1) + " Items"
+			itemHeader.innerHTML = this.aisle[0].toUpperCase() + this.aisle.substr(1) + " Items"
 		}
 	}
 }
