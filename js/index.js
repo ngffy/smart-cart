@@ -100,13 +100,37 @@ class ShoppingCart {
 		for (const item in this.items) {
 			let li = document.createElement('li')
 			let price = this.items[item]["unitPrice"]
-			let quantity = this.items[item]["quantity"]
-			li.textContent = item + " (" + quantity + " @ $" + price +  ")"
+			let cartQuantity = this.items[item]["quantity"]
+			li.textContent = item + " (" + cartQuantity + " @ $" + price +  ")"
 			cartList.appendChild(li)
 		}
 
 		let cartTotal = document.getElementById("cart-total")
 		cartTotal.innerHTML = "$" + this.total.toFixed(2)
+
+		let itemList = document.getElementById("item-list")
+
+		// clear list
+		itemList.innerHTML = ""
+
+		for (const item in this.userList.items) {
+			let li = document.createElement('li')
+			let unit = this.userList.items[item]["unit"]
+			let listQuantity = this.userList.items[item]["unitQuantity"]
+			let cartQuantity = 0
+
+			if (item in this.items) {
+				cartQuantity = this.items[item]["quantity"]
+			}
+
+			li.textContent = item + " (" + listQuantity + " " + unit +  ")"
+
+			if (listQuantity <= cartQuantity) {
+				li.classList.add('gotten')
+			}
+
+			itemList.appendChild(li)
+		}
 	}
 }
 

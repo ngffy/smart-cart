@@ -41,6 +41,10 @@ li {
 	width: 150px;
 }
 
+.gotten {
+	background-color: #ADA9B7
+}
+
 #store-search {
 	grid-column: 3;
 	grid-row: 1;
