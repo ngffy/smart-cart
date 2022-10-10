@@ -218,6 +218,15 @@ class ShoppingCart {
 				couponList.appendChild(li)
 			}
 		}
+
+		let couponHeader = document.getElementById("coupon-header")
+		if (this.aisle === null) {
+			couponHeader.innerHTML = "All Coupons"
+		} else if (isFinite(this.aisle)) {
+			couponHeader.innerHTML = "Aisle " + this.aisle + " Coupons"
+		} else {
+			couponHeader.innerHTML = this.aisle[0].toUpperCase() + this.aisle.substr(1) + " Coupons"
+		}
 	}
 
 	updateUI() {
