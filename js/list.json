@@ -1,50 +1,42 @@
-[
-	{
-		"itemName": "milk",
-		"unitQuantity": 1
+{
+	"milk": {
+		"unitQuantity": 1,
+		"unit": "gallons"
 	},
-	{
-		"itemName": "eggs",
-		"unitQuantity": 1
+	"eggs": {
+		"unitQuantity": 1,
+		"unit": "cartons"
 	},
-	{
-		"itemName": "bananas",
-		"unitQuantity": 4
+	"bananas": {
+		"unitQuantity": 16,
+		"unit": "oz"
 	},
-	{
-		"itemName": "salt",
-		"unitQuantity": 1
+	"salt": {
+		"unitQuantity": 1,
+		"unit": "containers"
 	},
-	{
-		"itemName": "pepper",
-		"unitQuantity": 1
+	"pepper": {
+		"unitQuantity": 1,
+		"unit": "containers"
 	},
-	{
-		"itemName": "beef",
-		"unitQuantity": 16
+	"beef": {
+		"unitQuantity": 16,
+		"unit": "oz"
 	},
-	{
-		"itemName": "mushrooms",
-		"unitQuantity": 1
+	"mushrooms": {
+		"unitQuantity": 1,
+		"unit": "containers"
 	},
-	{
-		"itemName": "trout",
-		"unitQuantity": 1
+	"salmon": {
+		"unitQuantity": 4,
+		"unit": "fillets"
 	},
-	{
-		"itemName": "cod",
-		"unitQuantity": 1
+	"cottage cheese": {
+		"unitQuantity": 1,
+		"unit": "tubs"
 	},
-	{
-		"itemName": "pollock",
-		"unitQuantity": 1
-	},
-	{
-		"itemName": "cottage cheese",
-		"unitQuantity": 1
-	},
-	{
-		"itemName": "cheese",
-		"unitQuantity": 1
+	"cheese": {
+		"unitQuantity": 1,
+		"unit": "packages"
 	}
-]
+}
