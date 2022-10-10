@@ -101,7 +101,7 @@ class ShoppingCart {
 			let li = document.createElement('li')
 			let price = this.items[item]["unitPrice"]
 			let cartQuantity = this.items[item]["quantity"]
-			li.textContent = item + " (" + cartQuantity + " @ $" + price +  ")"
+			li.textContent = item + " (" + cartQuantity + " @ $" + price.toFixed(2) +  ")"
 			cartList.appendChild(li)
 		}
 
