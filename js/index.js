@@ -150,7 +150,7 @@ class ShoppingCart {
 
 		let itemHeader = document.getElementById("item-header")
 		if (this.aisle === null) {
-			itemHeader.innerHTML = "Items"
+			itemHeader.innerHTML = "All Items"
 		} else if (isFinite(this.aisle)) {
 			itemHeader.innerHTML = "Aisle " + this.aisle + " Items"
 		} else {
