@@ -91,6 +91,13 @@ class ShoppingCart {
 		this.removeFromCart(itemName, quantity)
 	}
 
+	payClick() {
+		this.items = {}
+		this.total = 0
+
+		this.updateUI()
+	}
+
 	updateUI() {
 		let cartList = document.getElementById("cart-list")
 
