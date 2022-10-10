@@ -37,7 +37,6 @@ class ShoppingCart {
 			this.items[itemName] = {"quantity": quantity, "unitPrice": price}
 		}
 
-		this.updateTotal()
 		this.updateUI()
 	}
 
@@ -50,7 +49,6 @@ class ShoppingCart {
 			delete this.items[itemName]
 		}
 
-		this.updateTotal()
 		this.updateUI()
 	}
 
@@ -65,6 +63,9 @@ class ShoppingCart {
 				this.total -= this.coupons[item]['discount'] * quantity
 			}
 		}
+
+		let cartTotal = document.getElementById("cart-total")
+		cartTotal.innerHTML = "$" + this.total.toFixed(2)
 	}
 
 	applyCoupon(itemName) {
@@ -72,7 +73,6 @@ class ShoppingCart {
 			this.coupons[itemName] = this.storeCoupons[itemName]
 		}
 
-		this.updateTotal()
 		this.updateUI()
 	}
 
@@ -204,9 +204,7 @@ class ShoppingCart {
 		this.updateCartList()
 		this.updateCouponList()
 		this.updateUserList()
-
-		let cartTotal = document.getElementById("cart-total")
-		cartTotal.innerHTML = "$" + this.total.toFixed(2)
+		this.updateTotal()
 	}
 }
 
