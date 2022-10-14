@@ -104,6 +104,14 @@ class ShoppingCart {
 	}
 
 	aisleClick(aisle) {
+		if (this.aisle !== null) {
+			document.getElementById("aisle-" + this.aisle).setAttribute("fill", "#A5FFD6");
+		}
+
+		if (aisle !== null) {
+			document.getElementById("aisle-" + aisle).setAttribute("fill", "#B5B1B2");
+		}
+
 		this.aisle = aisle
 		this.updateUI()
 	}
