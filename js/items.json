@@ -38,5 +38,93 @@
 	"cheese": {
 		"unitPrice": 1.50,
 		"location": "6"
+	},
+	"ice cream": {
+		"unitPrice": 6.42,
+		"location": "10"
+	},
+	"frozen pizza": {
+		"unitPrice": 4.99,
+		"location": "9"
+	},
+	"breakfast burrito": {
+		"unitPrice": 10.99,
+		"location": "9"
+	},
+	"dog food": {
+		"unitPrice": 50.00,
+		"location": "8"
+	},
+	"detergent": {
+		"unitPrice": 6.00,
+		"location": "7"
+	},
+	"dryer sheets": {
+		"unitPrice": 7.50,
+		"location": "7"
+	},
+	"fabric softener": {
+		"unitPrice": 1.00,
+		"location": "7"
+	},
+	"toilet paper": {
+		"unitPrice": 20.00,
+		"location": "5"
+	},
+	"paper towels": {
+		"unitPrice": 9.72,
+		"location": "5"
+	},
+	"tissues": {
+		"unitPrice": 6.10,
+		"location": "5"
+	},
+	"pineapple": {
+		"unitPrice": 4.50,
+		"location": "5"
+	},
+	"tortillas": {
+		"unitPrice": 0.75,
+		"location": "4"
+	},
+	"bread": {
+		"unitPrice": 0.75,
+		"location": "4"
+	},
+	"toilet plunger": {
+		"unitPrice": 5.20,
+		"location": "4"
+	},
+	"window cleaner": {
+		"unitPrice": 0.69,
+		"location": "3"
+	},
+	"turmeric": {
+		"unitPrice": 10.00,
+		"location": "3"
+	},
+	"catnip": {
+		"unitPrice": 10.01,
+		"location": "3"
+	},
+	"drain cleaner": {
+		"unitPrice": 3.59,
+		"location": "3"
+	},
+	"lightbulbs": {
+		"unitPrice": 7.99,
+		"location": "2"
+	},
+	"trash bags": {
+		"unitPrice": 5.62,
+		"location": "2"
+	},
+	"cookies": {
+		"unitPrice": 4.99,
+		"location": "1"
+	},
+	"lemon juice": {
+		"unitPrice": 2.53,
+		"location": "1"
 	}
 }
