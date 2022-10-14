@@ -22,8 +22,13 @@ class ShoppingCart {
 			.then(jsonObject => {
 				this.storeCoupons = jsonObject
 			})
+		let fetchSimulate = fetch("./js/simulate.json")
+			.then(response => response.json())
+			.then(jsonObject => {
+				this.simulation = jsonObject
+			})
 
-		Promise.all([fetchList, fetchItems, fetchCoupons])
+		Promise.all([fetchList, fetchItems, fetchCoupons, fetchSimulate])
 			.then(values => {
 				this.updateUI()
 			})
@@ -205,6 +210,24 @@ class ShoppingCart {
 		this.updateCouponList()
 		this.updateUserList()
 		this.updateTotal()
+	}
+
+	async simulate() {
+		for (let action of this.simulation) {
+			if (action.action === "view") {
+				this.aisleClick(action.aisle)
+			} else if (action.action === "add") {
+				this.addToCart(action.itemName, action.quantity)
+			} else if (action.action === "remove") {
+				this.removeFromCart(action.itemName, action.quantity)
+			} else if (action.action === "apply coupon") {
+				this.applyCoupon(action.itemName)
+			} else if (action.action === "checkout") {
+				this.payClick()
+			}
+
+			await new Promise(resolve => setTimeout(resolve, 1000))
+		}
 	}
 }
 

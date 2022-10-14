@@ -1,0 +1,32 @@
+[
+	{
+		"action": "view",
+		"aisle": "6"
+	},
+	{
+		"action": "add",
+		"itemName": "milk",
+		"quantity": "3"
+	},
+	{
+		"action": "remove",
+		"itemName": "milk",
+		"quantity": "1"
+	},
+	{
+		"action": "view",
+		"aisle": null
+	},
+	{
+		"action": "add",
+		"itemName": "mushrooms",
+		"quantity": "1"
+	},
+	{
+		"action": "apply coupon",
+		"itemName": "mushrooms"
+	},
+	{
+		"action": "checkout"
+	}
+]
