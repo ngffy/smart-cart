@@ -31,55 +31,77 @@
 				<h3>Store Map</h3>
 				<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">
 					<rect width="100%" height="100%" fill="#B5B1B2" stroke="black" stroke-width="5" onclick='userCart.aisleClick(null)'/>
-					<text x="60" y="40">1</text>
 					<defs>
-						<filter id="drop-shadow" x="0" y="0" width="130%" height="130%">
-							<feOffset result="offOut" in="SourceAlpha" dx="0" dy="0"/>
-							<feGaussianBlur result="blurOut" in="offOut" stdDeviation="10"/>
+						<filter id="drop-shadow" x="-10%" y="-10%" width="200%" height="200%">
+							<feOffset result="offOut" in="SourceAlpha" dx="2" dy="2"/>
+							<feGaussianBlur result="blurOut" in="offOut" stdDeviation="1"/>
 							<feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
 						</filter>
 					</defs>
-					<rect x="50" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("1")' filter="url(#drop-shadow)">
+					<rect x="50" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
-					<text x="160" y="40">2</text>
-					<rect x="150" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("2")' filter="url(#drop-shadow)">
+					<rect x="150" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
-					<text x="260" y="40">3</text>
-					<rect x="250" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("3")' filter="url(#drop-shadow)">
+					<rect x="250" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
-					<text x="360" y="40">4</text>
-					<rect x="350" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("4")' filter="url(#drop-shadow)">
+					<rect x="350" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
-					<text x="460" y="40">5</text>
-					<rect x="450" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("5")' filter="url(#drop-shadow)">
+					<rect x="450" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
-					<text x="560" y="40">6</text>
-					<rect x="550" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("6")' filter="url(#drop-shadow)">
+					<rect x="550" y="50" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
-					<text x="60" y="290">7</text>
-					<rect x="50" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("7")' filter="url(#drop-shadow)">
+					<rect x="50" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
-					<text x="160" y="290">8</text>
-					<rect x="150" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("8")' filter="url(#drop-shadow)">
+					<rect x="150" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
-					<text x="260" y="290">9</text>
-					<rect x="250" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("9")' filter="url(#drop-shadow)">
+					<rect x="250" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
-					<text x="355" y="290">10</text>
-					<rect x="350" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("10")' filter="url(#drop-shadow)">
+					<rect x="350" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
-					<text x="455" y="290">11</text>
-					<rect x="450" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("11")' filter="url(#drop-shadow)">
+					<rect x="450" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
-					<text x="555" y="290">12</text>
-					<rect x="550" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("12")' filter="url(#drop-shadow)">
+					<rect x="550" y="300" width="30" height="150" fill="#A1CDF4" stroke="black" stroke-width="3">
 					</rect>
+					<rect x="615" y="100" width="75" height="75" fill="#A1CDF4" stroke="black" stroke-width="3">
+					</rect>
+					<rect x="615" y="350" width="75" height="75" fill="#A1CDF4" stroke="black" stroke-width="3">
+					</rect>
+
+					<text x="110" y="40">1</text>
+					<circle cx="115" cy="125" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("1")' filter="url(#drop-shadow)"/>
+
+					<text x="210" y="40">2</text>
+					<circle cx="215" cy="125" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("2")' filter="url(#drop-shadow)"/>
+
+					<text x="310" y="40">3</text>
+					<circle cx="315" cy="125" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("3")' filter="url(#drop-shadow)"/>
+
+					<text x="410" y="40">4</text>
+					<circle cx="415" cy="125" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("4")' filter="url(#drop-shadow)"/>
+
+					<text x="510" y="40">5</text>
+					<circle cx="515" cy="125" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("5")' filter="url(#drop-shadow)"/>
+
+					<text x="110" y="290">6</text>
+					<circle cx="115" cy="375" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("6")' filter="url(#drop-shadow)"/>
+
+					<text x="210" y="290">7</text>
+					<circle cx="215" cy="375" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("7")' filter="url(#drop-shadow)"/>
+
+					<text x="310" y="290">8</text>
+					<circle cx="315" cy="375" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("8")' filter="url(#drop-shadow)"/>
+
+					<text x="405" y="290">9</text>
+					<circle cx="415" cy="375" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("9")' filter="url(#drop-shadow)"/>
+
+					<text x="505" y="290">10</text>
+					<circle cx="515" cy="375" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("10")' filter="url(#drop-shadow)"/>
+
 					<text x="630" y="90">Meat</text>
-					<rect x="615" y="100" width="75" height="75" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("meat")' filter="url(#drop-shadow)">
-					</rect>
+					<circle cx="650" cy="135" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("Meat")' filter="url(#drop-shadow)"/>
+
 					<text x="620" y="340">Produce</text>
-					<rect x="615" y="350" width="75" height="75" fill="#A1CDF4" stroke="black" stroke-width="4" onclick='userCart.aisleClick("produce")' filter="url(#drop-shadow)">
-					</rect>
+					<circle cx="650" cy="385" r="20" fill="#A5FFD6" stroke="black" stroke-width="4" onclick='userCart.aisleClick("Produce")' filter="url(#drop-shadow)"/>
 				</svg>
 			</div>
 			<div class="list-div" id="cart">
@@ -101,6 +123,10 @@
 					<button onclick="userCart.addToCartClick()">Add to cart</button>
 					<button onclick="userCart.removeFromCartClick()">Remove from cart</button>
 				</div>
+			</div>
+			<br>
+			<div>
+				<button onclick="userCart.simulate()">Simulate</button>
 			</div>
 		</main>
 		<script src="js/index.js"></script>
