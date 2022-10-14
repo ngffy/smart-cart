@@ -4,5 +4,38 @@
 	},
 	"cheese": {
 		"discount": 0.50
+	},
+	"milk": {
+		"discount": 1.60
+	},
+	"ice cream": {
+		"discount": 0.01
+	},
+	"pineapple": {
+		"discount": 0.10
+	},
+	"toilet plunger": {
+		"discount": 1.50
+	},
+	"bread": {
+		"discount": 0.75
+	},
+	"frozen pizza": {
+		"discount": 1.00
+	},
+	"window cleaner": {
+		"discount": 0.25
+	},
+	"bananas": {
+		"discount": 0.10
+	},
+	"trash bags": {
+		"discount": 0.50
+	},
+	"cookies": {
+		"discount": 0.60
+	},
+	"catnip": {
+		"discount": 0.71
 	}
 }
