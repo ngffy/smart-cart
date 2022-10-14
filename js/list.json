@@ -38,5 +38,33 @@
 	"cheese": {
 		"unitQuantity": 1,
 		"unit": "packages"
+	},
+	"ice cream": {
+		"unitQuantity": 4,
+		"unit": "gallons"
+	},
+	"toilet paper": {
+		"unitQuantity": 20,
+		"unit": "packs"
+	},
+	"trash bags": {
+		"unitQuantity": 1,
+		"unit": "packs"
+	},
+	"catnip": {
+		"unitQuantity": 2,
+		"unit": "oz"
+	},
+	"cookies": {
+		"unitQuantity": 10,
+		"unit": "packs"
+	},
+	"pineapples": {
+		"unitQuantity": 3,
+		"unit": "cans"
+	},
+	"window cleaner": {
+		"unitQuantity": 1,
+		"unit": "bottle"
 	}
 }
