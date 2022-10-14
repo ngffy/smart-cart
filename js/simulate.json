@@ -14,8 +14,91 @@
 		"quantity": "1"
 	},
 	{
+		"action": "apply coupon",
+		"itemName": "milk"
+	},
+	{
+		"action": "add",
+		"itemName": "cottage cheese",
+		"quantity": "1"
+	},
+	{
+		"action": "apply coupon",
+		"itemName": "cheese"
+	},
+	{
 		"action": "view",
 		"aisle": null
+	},
+	{
+		"action": "view",
+		"aisle": "10"
+	},
+	{
+		"action": "add",
+		"itemName": "ice cream",
+		"quantity": "4"
+	},
+	{
+		"action": "view",
+		"aisle": null
+	},
+	{
+		"action": "view",
+		"aisle": "produce"
+	},
+	{
+		"action": "add",
+		"itemName": "bananas",
+		"quantity": "20"
+	},
+	{
+		"action": "view",
+		"aisle": null
+	},
+	{
+		"action": "view",
+		"aisle": "meat"
+	},
+	{
+		"action": "add",
+		"itemName": "beef",
+		"quantity": "16"
+	},
+	{
+		"action": "add",
+		"itemName": "salmon",
+		"quantity": "4"
+	},
+	{
+		"action": "view",
+		"aisle": null
+	},
+	{
+		"action": "view",
+		"aisle": "5"
+	},
+	{
+		"action": "add",
+		"itemName": "toilet paper",
+		"quantity": "20"
+	},
+	{
+		"action": "add",
+		"itemName": "pineapple",
+		"quantity": "3"
+	},
+	{
+		"action": "apply coupon",
+		"itemName": "pineapple"
+	},
+	{
+		"action": "view",
+		"aisle": null
+	},
+	{
+		"action": "view",
+		"aisle": "4"
 	},
 	{
 		"action": "add",
@@ -25,6 +108,46 @@
 	{
 		"action": "apply coupon",
 		"itemName": "mushrooms"
+	},
+	{
+		"action": "view",
+		"aisle": null
+	},
+	{
+		"action": "view",
+		"aisle": "3"
+	},
+	{
+		"action": "add",
+		"itemName": "salt",
+		"quantity": "1"
+	},
+	{
+		"action": "add",
+		"itemName": "pepper",
+		"quantity": "1"
+	},
+	{
+		"action": "add",
+		"itemName": "catnip",
+		"quantity": "2"
+	},
+	{
+		"action": "add",
+		"itemName": "window cleaner",
+		"quantity": "1"
+	},
+	{
+		"action": "apply coupon",
+		"itemName": "catnip"
+	},
+	{
+		"action": "apply coupon",
+		"itemName": "window cleaner"
+	},
+	{
+		"action": "view",
+		"aisle": null
 	},
 	{
 		"action": "checkout"
